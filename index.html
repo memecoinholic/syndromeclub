@@ -1,0 +1,937 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>SYNDROME</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <style>
+      body {
+        background-color: #000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease 0.2s, visibility 0.2s ease 0.2s;
+      }
+
+      .loaded body {
+        opacity: 1;
+        visibility: visible;
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/audio_control.css">
+    <link rel="icon" href="images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <!-- Background Music & Entry Overlay -->
+    <div id="entry-overlay">
+      <div class="entry-content">
+        <img src="images/logo.svg" alt="SYNDROME" class="entry-logo">
+        <h1 class="entry-title">WELCOME TO SYNDROME</h1>
+        <p class="entry-subtitle">Where everyone thinks they’re early.</p>
+        <button id="enter-btn">ENTER</button>
+      </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="bg-music" loop preload="auto">
+      <source src="audio/music.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Toggle Button -->
+    <div id="music-toggle" title="Toggle Music">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+      </svg>
+    </div>
+
+    <div class="wrapper">
+      <div class="menu-open-bg"></div>
+      <header class="header" data-lp="">
+        <div class="header__box">
+          <a href="../" class="header__logo"><img src="images/logo.png" alt="SYNDROME "></a>
+          <div class="header__decor">////</div>
+           <div class="header__decor">////</div>
+          <div class="header__right">
+            <div class="header__menu menu">
+              <button type="button" class="menu__icon icon-menu">
+                <span></span>
+              </button>
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="#" data-goto=".hero__rows" data-goto-top="80" class="menu__link">news</a>
+                  </li>
+                  <li class="menu__item menu__item--dec">
+                    <span>|</span>
+                  </li>
+                  <li class="menu__item">
+                    <a href="#" data-goto=".manifesto" data-goto-top="80" class="menu__link">manifesto</a>
+                  </li>
+                  <li class="menu__item menu__item--dec">
+                    <span>|</span>
+                  </li>
+                  
+                  
+                  <li class="menu__item">
+                    <a href="#" data-goto=".how" class="menu__link">how to buy</a>
+                  </li>
+                  <li class="menu__item menu__item--dec">
+                    <span>|</span>
+                  </li>
+                  
+                  <!-- <li class="menu__item">
+              <a href="#" data-goto=".how" class="menu__link">PFP</a>
+            </li> -->
+                  <!-- <li class="menu__item menu__item--dec">
+              <span>|</span>
+            </li> -->
+                   
+                </ul>
+              </nav>
+            </div>
+            <a href="https://pump.fun" target="_blank" class="header__button" data-da=".menu__body, 767.98"><span>BUY Pump.fun</span></a>
+          </div>
+        </div>
+      </header>
+
+      <main class="page">
+        <section class="page__hero hero">
+          <div class="hero__bg">
+            <img src="images/bg.png" alt="Image">
+          </div>
+          <div class="hero__decor">
+            <div class="hero__decor-item hero__decor-item--1">
+              <img src="images/d1.png" alt="Decor">
+            </div>
+            <div class="hero__decor-item hero__decor-item--2">
+              <img src="images/d2.png" alt="Decor">
+            </div>
+            <div class="hero__decor-item hero__decor-item--3">
+              <img src="images/d3.png" alt="Decor">
+            </div>
+            <div class="hero__decor-item hero__decor-item--4">
+              <img src="images/d4.png" alt="Decor">
+            </div>
+            <div class="hero__decor-item hero__decor-item--5">
+              <img src="images/d5.png" alt="Decor">
+            </div>
+            <div class="hero__decor-item hero__decor-item--6">
+              <img src="images/d6.png" alt="Decor">
+            </div>
+            <div class="hero__decor-item hero__decor-item--7">
+              <img src="images/d7.png" alt="Decor">
+            </div>
+            <div class="hero__decor-item hero__decor-item--8">
+              <img src="images/Rocket.png" alt="Decor">
+            </div>
+          </div>
+          <div class="hero__container">
+            <div class="hero__moon">
+              <img src="images/Moon.png" alt="TARDI">
+            </div>
+            <div class="hero__main">
+              <div class="hero__title">
+                <img src="images/title.png" alt="TARDI">
+              </div>
+              <div class="hero__content">
+                <div class="hero__image">
+                  <img src="images/hero.png" alt="TARDI">
+                </div>
+                <div class="hero__actions">
+                  <a href="https://pump.fun" target="_blank" class="hero__buy">
+                    <img src="images/Buy%20Now.svg" alt="Buy Now">
+                  </a>
+                  <div class="hero__social">
+                    <a href="https://x.com/syndromeclubfun" target="_blank" class="hero__social-item">
+                      <img src="images/X.svg" alt="X">
+                    </a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hero__rows" id="news">
+              <div class="hero__row hero__row--1">
+                <div class="hero__item item-hero">
+                  <div class="item-hero__box">
+                    <div class="item-hero__header">
+                      <img src="images/h1.svg" alt="Item">
+                      <img src="images/h2.svg" alt="Item">
+                    </div>
+                    <div class="item-hero__body">
+                      <h3 class="item-hero__body-header">
+                        <div><span>-01 > The choosen one. . . . .</span></div>
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 3H5V5H3V19H5V21H19V19H21V5H19V3ZM19 5V19H5V5H19ZM11 7H13V13H17V15H11V7Z" fill="#75FF86"></path>
+                          </svg>
+                          <span>100x</span>
+                        </div>
+                      </h3>
+                      <div class="item-hero__body-text">
+                        Thousands stepped into the same trade…
+each one thinking they’re the exception.
+                      </div>
+                      <div class="item-hero__body-bottom">
+                        <a href="https://www.sfchronicle.com/personal-finance/article/bitcoin-crypto-ai-invest-20809592.php?utm_source=chatgpt.com/" target="_blank">
+                          <span>> Read the original article</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                            <g clip-path="url(#clip0_34_79)">
+                              <path d="M2.63849 14.2372L13.0469 3.82885M13.0469 3.82885L13.0469 13.8445M13.0469 3.82885L3.03126 3.82885" stroke="#75FF86" stroke-width="1.5"></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_34_79">
+                                <rect width="16" height="16" fill="white" transform="translate(0 0.860107)"></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                        <span>. . . . . . . . . . . . . . .</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hero__item item-hero">
+                  <div class="item-hero__box">
+                    <div class="item-hero__header">
+                      <img src="images/h1.svg" alt="Item">
+                      <img src="images/h2.svg" alt="Item">
+                    </div>
+                    <div class="item-hero__body">
+                      <div class="item-hero__body-image">
+                        <img src="images/item1.jpg" alt="Image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hero__row hero__row--2">
+                <div class="hero__item-no-height-box">
+                  <div class="hero__item item-hero">
+                    <div class="item-hero__box">
+                      <div class="item-hero__header">
+                        <img src="images/h1.svg" alt="Item">
+                        <img src="images/h2.svg" alt="Item">
+                      </div>
+                      <div class="item-hero__body">
+                        <div class="item-hero__body-image">
+                          <img src="images/item2.jpg" alt="Image">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hero__item item-hero">
+                  <div class="item-hero__box">
+                    <div class="item-hero__header">
+                      <img src="images/h1.svg" alt="Item">
+                      <img src="images/h2.svg" alt="Item">
+                    </div>
+                    <div class="item-hero__body">
+                      <h3 class="item-hero__body-header">
+                        <div><span>-02 > The choosen one. . . . .</span></div>
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 3H5V5H3V19H5V21H19V19H21V5H19V3ZM19 5V19H5V5H19ZM11 7H13V13H17V15H11V7Z" fill="#75FF86"></path>
+                          </svg>
+                          <span>100x</span>
+                        </div>
+                      </h3>
+                      <div class="item-hero__body-text">
+                        Rare footage shows thousands of traders jumping into the same play at the exact same time, calling it “their own strategy.”
+From the outside, it looked less like genius… and more like synchronized chaos.
+                      </div>
+                      <div class="item-hero__body-bottom">
+                        <a href="https://www.businessinsider.com/memecoins-cryptocurrency-altcoins-market-trump-libra-milei-celebrities-scams-regulation-2025-2?utm_source=chatgpt.com/" target="_blank">
+                          <span>> Read the original article</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                            <g clip-path="url(#clip0_34_79)">
+                              <path d="M2.63849 14.2372L13.0469 3.82885M13.0469 3.82885L13.0469 13.8445M13.0469 3.82885L3.03126 3.82885" stroke="#75FF86" stroke-width="1.5"></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_34_79">
+                                <rect width="16" height="16" fill="white" transform="translate(0 0.860107)"></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                        <span>. . . . . . . . . . . . . . .</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hero__row hero__row--3">
+                <div class="hero__item item-hero hidden"></div>
+                <div class="hero__item item-hero">
+                  <div class="item-hero__box">
+                    <div class="item-hero__header">
+                      <img src="images/h1.svg" alt="Item">
+                      <img src="images/h2.svg" alt="Item">
+                    </div>
+                    <div class="item-hero__body">
+                      <h3 class="item-hero__body-header">
+                        <div><span>-03 > The choosen one. . . . .</span></div>
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 3H5V5H3V19H5V21H19V19H21V5H19V3ZM19 5V19H5V5H19ZM11 7H13V13H17V15H11V7Z" fill="#75FF86"></path>
+                          </svg>
+                          <span>100x</span>
+                        </div>
+                      </h3>
+                      <div class="item-hero__body-text">
+                        WHY THOUSANDS RUSHED INTO THE SAME COIN, ALL BELIEVING IT WAS THEIR MOMENT
+                      </div>
+                      <div class="item-hero__body-bottom">
+                        <a href="https://www.vanityfair.com/news/story/the-meme-coin-evangelists?utm_source=chatgpt.com" target="_blank">
+                          <span>> Read the original article</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                            <g clip-path="url(#clip0_34_79)">
+                              <path d="M2.63849 14.2372L13.0469 3.82885M13.0469 3.82885L13.0469 13.8445M13.0469 3.82885L3.03126 3.82885" stroke="#75FF86" stroke-width="1.5"></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_34_79">
+                                <rect width="16" height="16" fill="white" transform="translate(0 0.860107)"></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                        <span>. . . . . . . . . . . . . . .</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hero__item item-hero">
+                  <div class="item-hero__box">
+                    <div class="item-hero__header">
+                      <img src="images/h1.svg" alt="Item">
+                      <img src="images/h2.svg" alt="Item">
+                    </div>
+                    <div class="item-hero__body">
+                      <div class="item-hero__body-image">
+                        <img src="images/item3.jpg" alt="Image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hero__row hero__row--4">
+                <div class="hero__item item-hero">
+                  <div class="item-hero__box">
+                    <div class="item-hero__header">
+                      <img src="images/h1.svg" alt="Item">
+                      <img src="images/h2.svg" alt="Item">
+                    </div>
+                    <div class="item-hero__body">
+                      <h3 class="item-hero__body-header">
+                        <div><span>-04 > The choosen one. . . . .</span></div>
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 3H5V5H3V19H5V21H19V19H21V5H19V3ZM19 5V19H5V5H19ZM11 7H13V13H17V15H11V7Z" fill="#75FF86"></path>
+                          </svg>
+                          <span>100x</span>
+                        </div>
+                      </h3>
+                      <div class="item-hero__body-text">
+                        Traders: The Surprisingly Confident Believers of the Same 100x Dream | Compilation
+                      </div>
+                      <div class="item-hero__body-video">
+                        <video 
+  autoplay 
+  muted 
+  loop 
+  playsinline
+  style="width: 100%; height: 100%; border: 0; object-fit: cover;"
+>
+  <source src="images/syndromevid.mp4" type="video/mp4">
+</video>
+                      </div>
+                      <div class="item-hero__body-bottom">
+                        <a href="https://x.com/syndromeclubfun/status/2046770435925397684" target="_blank">
+                          <span>> Watch video</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                            <g clip-path="url(#clip0_34_79)">
+                              <path d="M2.63849 14.2372L13.0469 3.82885M13.0469 3.82885L13.0469 13.8445M13.0469 3.82885L3.03126 3.82885" stroke="#75FF86" stroke-width="1.5"></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_34_79">
+                                <rect width="16" height="16" fill="white" transform="translate(0 0.860107)"></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                        <span>. . . . . . . . . . . . . . .</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hero__row-column">
+                  <div class="hero__item item-hero">
+                    <div class="item-hero__box">
+                      <div class="item-hero__header">
+                        <img src="images/h1.svg" alt="Item">
+                        <img src="images/h2.svg" alt="Item">
+                      </div>
+                      <div class="item-hero__body">
+                        <h3 class="item-hero__body-header">
+                          <div><span>-05 > The choosen one. . . . .</span></div>
+                          <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                              <path d="M19 3H5V5H3V19H5V21H19V19H21V5H19V3ZM19 5V19H5V5H19ZM11 7H13V13H17V15H11V7Z" fill="#75FF86"></path>
+                            </svg>
+                            <span>100x</span>
+                          </div>
+                        </h3>
+                        <div class="item-hero__body-text">
+                          NEW DISCOVERY REVEALS WHY EVERY TRADER THINKS THEY’RE BUILT TO SURVIVE THE SAME TRADE
+                        </div>
+                        <div class="item-hero__body-bottom">
+                          <a href="https://www.sfchronicle.com/personal-finance/article/bitcoin-crypto-ai-invest-20809592.php?utm_source=chatgpt.com/" target="_blank">
+                            <span>> Read the original article</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                              <g clip-path="url(#clip0_34_79)">
+                                <path d="M2.63849 14.2372L13.0469 3.82885M13.0469 3.82885L13.0469 13.8445M13.0469 3.82885L3.03126 3.82885" stroke="#75FF86" stroke-width="1.5"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_34_79">
+                                  <rect width="16" height="16" fill="white" transform="translate(0 0.860107)"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </a>
+                          <span>. . . . . . . . . . . . . . .</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hero__item item-hero">
+                    <div class="item-hero__box">
+                      <div class="item-hero__header">
+                        <img src="images/h1.svg" alt="Item">
+                        <img src="images/h2.svg" alt="Item">
+                      </div>
+                      <div class="item-hero__body">
+                        <div class="item-hero__body-image">
+                          <img src="images/item4.jpg" alt="Image">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hero__row hero__row--5">
+                <div class="hero__item item-hero">
+                  <div class="item-hero__box">
+                    <div class="item-hero__header">
+                      <img src="images/h1.svg" alt="Item">
+                      <img src="images/h2.svg" alt="Item">
+                    </div>
+                    <div class="item-hero__body">
+                      <div class="item-hero__body-image">
+                        <img src="images/item5.jpg" alt="Image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hero__item item-hero">
+                  <div class="item-hero__box">
+                    <div class="item-hero__header">
+                      <img src="images/h1.svg" alt="Item">
+                      <img src="images/h2.svg" alt="Item">
+                    </div>
+                    <div class="item-hero__body">
+                      <h3 class="item-hero__body-header">
+                        <div><span>-06 >  The choosen one. . . . .</span></div>
+                        <div>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 3H5V5H3V19H5V21H19V19H21V5H19V3ZM19 5V19H5V5H19ZM11 7H13V13H17V15H11V7Z" fill="#75FF86"></path>
+                          </svg>
+                          <span>100x</span>
+                        </div>
+                      </h3>
+                      <div class="item-hero__body-text">
+                        A “Risk-Proof” Strategy May Be Hiding in Every Trader’s Mind, As Thousands Believe They’re Immune to the Same Market Cycle
+                      </div>
+                      <div class="item-hero__body-bottom">
+                        <a href="https://www.sfchronicle.com/personal-finance/article/bitcoin-crypto-ai-invest-20809592.php?utm_source=chatgpt.com/" target="_blank">
+                          <span>> Read the original article</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                            <g clip-path="url(#clip0_34_79)">
+                              <path d="M2.63849 14.2372L13.0469 3.82885M13.0469 3.82885L13.0469 13.8445M13.0469 3.82885L3.03126 3.82885" stroke="#75FF86" stroke-width="1.5"></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_34_79">
+                                <rect width="16" height="16" fill="white" transform="translate(0 0.860107)"></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                        <span>. . . . . . . . . . . . . . .</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__musk musk">
+          <div class="musk__bg">
+            <img src="images/bg_1.png" alt="BG">
+          </div>
+          <div class="musk__container">
+            <div class="musk__content">
+              <div class="musk__item item-musk">
+                <div class="item-musk__box">
+                  <div class="item-musk__header">
+                    <img src="images/h1.svg" alt="Item">
+                  </div>
+                  <div class="item-musk__body">
+                    <h3 class="item-musk__body-header">
+                      <div><span>-07 > The choosen one. . . . .</span></div>
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M19 3H5V5H3V19H5V21H19V19H21V5H19V3ZM19 5V19H5V5H19ZM11 7H13V13H17V15H11V7Z" fill="#75FF86"></path>
+                        </svg>
+                        <span>100x</span>
+                      </div>
+                    </h3>
+                    <div class="item-musk__body-post">
+                      <div class="item-musk__body-post-author">
+                        <div class="item-musk__body-post-author-avatar">
+                          <img src="images/avatar.png" alt="Elon Musk">
+                        </div>
+                        <a href="https://x.com/syndromeclubfun" target="_blank" class="item-musk__body-post-author-name">
+                          <span>Elon Musk</span>
+                          <span>@elonmusk</span>
+                        </a>
+                      </div>
+                      <div class="item-musk__body-post-message">
+                        /Stockholm: it’s not just a syndrome
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item-musk__body-bottom">
+                    <a href="https://x.com/elonmusk/status/1017055691230466048" target="_blank">
+                      <span>> See the original tweet</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                        <g clip-path="url(#clip0_34_79)">
+                          <path d="M2.63849 14.2372L13.0469 3.82885M13.0469 3.82885L13.0469 13.8445M13.0469 3.82885L3.03126 3.82885" stroke="#75FF86" stroke-width="1.5"></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_34_79">
+                            <rect width="16" height="16" fill="white" transform="translate(0 0.860107)"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                    <span>. . . . . . . . . . . . . . .</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="musk__image">
+              <div class="musk__item item-musk">
+                <div class="item-musk__box">
+                  <div class="item-musk__header">
+                    <img src="images/h1.svg" alt="Item">
+                    <img src="images/h2.svg" alt="Item">
+                  </div>
+                  <div class="item-musk__body">
+                    <h3 class="item-musk__body-header">
+                      <div><span>>Hallucinations togethers</span></div>
+                      <div>
+                        <span>. . . //</span>
+                      </div>
+                    </h3>
+                    <div class="item-musk__body-image">
+                      <img src="images/01.jpg" alt="Tardi">
+                    </div>
+                  </div>
+                  <div class="item-hero__body-bottom">
+                    <span>> 12. . .13. . .</span>
+                    <span>. . . . . . . . . . . . . . .</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__manifesto manifesto">
+          <div class="manifesto__container">
+            <div class="manifesto__content">
+              <div class="manifesto__item item-hero">
+                <div class="item-hero__box">
+                  <div class="item-hero__header">
+                    <img src="images/h1.svg" alt="Item">
+                    <img src="images/h2.svg" alt="Item">
+                  </div>
+                  <div class="item-hero__body">
+                    <div class="item-hero__body-header-manifesto">
+                      <span>-100x ></span>
+                      <h3 class="item-hero__body-title">
+                        The Eternal Pattern: $SYNDROME Guide to Believing, Entering, and Realizing
+                      </h3>
+                      <span>. . . . . . . . $</span>
+                    </div>
+                    <div class="item-hero__body-text-manifesto">
+                      <p>
+                        <span>Welcome to $SYNDROME — </span> where everyone thinks they’re early. (Statistically consistent.)
+                      </p>
+                      <ul>
+                        <li>
+                          We’ve watched thousands arrive with the same conviction.
+                        </li>
+                        <li>We’ve seen “once-in-a-lifetime” plays happen every single day.</li>
+                        <li>
+                          We’ve witnessed crowds move as individuals… at the exact same time.
+                        </li>
+                      </ul>
+                      <p>
+                        Think of this as your portfolio’s mirror.
+When everything feels like this is the one,
+when the charts look like destiny,
+when conviction feels personal…
+                      </p>
+                      <p>Every cycle, the story repeats:
+New believers. New confidence. Same outcome.</p>
+                    </div>
+                    <a href="" data-popup="#manifesto-read-more" class="item-hero__body-read-more"><span>> Read More</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                        <g clip-path="url(#clip0_34_79)">
+                          <path d="M2.63849 14.2372L13.0469 3.82885M13.0469 3.82885L13.0469 13.8445M13.0469 3.82885L3.03126 3.82885" stroke="#75FF86" stroke-width="1.5"></path>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_34_79">
+                            <rect width="16" height="16" fill="white" transform="translate(0 0.860107)"></rect>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </a>
+                    <br>
+                    
+                    <div class="item-hero__body-bottom">
+                      <span>> //_ 10 11 12 13_</span>
+                      <span>. . . . . . . . . . . . . . .</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="manifesto__image">
+              <img loading="lazy" src="images/01.png" alt="Image">
+            </div>
+          </div>
+        </section>
+       
+        <section class="page__how how" data-watch="navigator">
+          <div class="how__bg">
+            <img loading="lazy" src="images/bg_2.png" alt="BG">
+          </div>
+          <div class="how__labels">
+            <div class="how__label how__label--1">
+              <img loading="lazy" src="images/-Label1.svg" alt="Decor">
+            </div>
+            <div class="how__label how__label--2">
+              <img loading="lazy" src="images/-Label2.svg" alt="Decor">
+            </div>
+          </div>
+          <div class="how__rocket">
+            <img loading="lazy" src="images/Rocket_1.png" alt="Image">
+          </div>
+          <div class="how__decor">
+            <div class="how__decor-item how__decor-item--1">
+              <img loading="lazy" src="images/dec1.png" alt="Decor">
+            </div>
+            <div class="how__decor-item how__decor-item--2">
+              <img loading="lazy" src="images/dec2.png" alt="Decor">
+            </div>
+            <div class="how__decor-item how__decor-item--3">
+              <img loading="lazy" src="images/dec3.png" alt="Decor">
+            </div>
+            <div class="how__decor-item how__decor-item--4">
+              <img src="images/dec4.png" alt="Decor">
+            </div>
+            <div class="how__decor-item how__decor-item--5">
+              <img loading="lazy" src="images/dec5.png" alt="Decor">
+            </div>
+            <div class="how__decor-item how__decor-item--6">
+              <img loading="lazy" src="images/dec6.png" alt="Decor">
+            </div>
+            <div class="how__decor-item how__decor-item--7">
+              <img loading="lazy" src="images/dec7.png" alt="Decor">
+            </div>
+          </div>
+          <div class="how__container">
+            <h2 class="how__title">
+              <img loading="lazy" src="images/title_1.png" alt="How To Buy">
+            </h2>
+            <div class="how__items">
+              <div class="how__item how__item--1">
+                <div class="how__item-box">
+                  <div class="how__item-header">
+                    <img src="images/h1_1.svg" alt="Item">
+                  </div>
+                  <div class="how__item-body">
+                    <div class="how__item-body-header">
+                      <span>-01 ></span>
+                      <h3>(Step 1)</h3>
+                      <span>. . . . . . . .$</span>
+                    </div>
+                    <div class="how__item-body-label">
+                      Wallet Setup & Acquire SOL
+                    </div>
+                    <div class="how__item-body-text">
+                      >Install a Phantom wallet <br>
+                      Get SOL: Purchase from exchanges or transfer.
+                    </div>
+                    <div class="how__item-body-bottom">
+                      <span>//_ 10 11 12 13_</span>
+                      <span>. . . . . . . . . . . . . . .</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="how__item how__item--2">
+                <div class="how__item-box">
+                  <div class="how__item-header">
+                    <img src="images/h1_1.svg" alt="Item">
+                  </div>
+                  <div class="how__item-body">
+                    <div class="how__item-body-header">
+                      <span>-02 ></span>
+                      <h3>(Step 2)</h3>
+                      <span>. . . . . . . .$</span>
+                    </div>
+                    <div class="how__item-body-label">
+                      Swap SOL for $SYNDROME
+                    </div>
+                    <div class="how__item-body-text">
+                      >Go to Pump.fun or any Dex <br>
+                      Connect your wallet.
+Find the SOL–$SYNDROME pair.
+Execute the swap.
+                    </div>
+                    <div class="how__item-body-bottom">
+                      <span>//_ 10 11 12 13_</span>
+                      <span>. . . . . . . . . . . . . . .</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="how__item how__item--3">
+                <div class="how__item-box">
+                  <div class="how__item-header">
+                    <img src="images/h1_1.svg" alt="Item">
+                  </div>
+                  <div class="how__item-body">
+                    <div class="how__item-body-header">
+                      <span>-03 ></span>
+                      <h3>(Step 3)</h3>
+                      <span>. . . . . . . .$</span>
+                    </div>
+                    <div class="how__item-body-text">
+                      Relax and HODL and do not be a 100x maniac like Syndrome doing.
+                    </div>
+                    <div class="how__item-body-bottom">
+                      <span>//_ 10 11 12 13_</span>
+                      <span>. . . . . . . . . . . . . . .</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="how__earth">
+                <div class="how__earth-bg">
+                  <img loading="lazy" src="images/earth-bg.png" alt="Image">
+                </div>
+                <div class="how__earth-earth">
+                  <img loading="lazy" src="images/earth.png" alt="Image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__join join">
+          <div class="join__container">
+            <div class="join__content">
+              <h2 class="join__title">
+                <img loading="lazy" src="images/Title.png" alt="JOIN US">
+              </h2>
+              <div class="join__actions">
+                <a href="https://pump.fun" target="_blank" class="join__buy">
+                  <img src="images/Buy%20Now.svg" alt="Buy Now">
+                </a>
+                <div class="join__social">
+                  <a href="https://x.com/syndromeclubfun" target="_blank" class="join__social-item">
+                    <img src="images/X.svg" alt="X">
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="join__image">
+              <img loading="lazy" src="images/Charcter.png" alt="Image">
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__top">
+          <div class="footer__container">
+            <div class="footer__top-body">
+              <div class="footer__top-image">
+                <img loading="lazy" src="images/01_1.png" alt="TARDI">
+              </div>
+              <div class="footer__top-main main-footer">
+                <div class="main-footer__top">
+                  <img loading="lazy" src="images/top.svg" alt="Dec">
+                </div>
+                <div class="main-footer__body">
+                  <div class="main-footer__columns">
+                    <div class="main-footer__column">
+                      <a href="#" data-goto=".hero__rows" data-goto-top="80" class="main-footer__menu-item">
+                        <span>[1]</span> <span>News</span>
+                      </a>
+                      <a href="#" data-goto=".manifesto" data-goto-top="80" class="main-footer__menu-item">
+                        <span>[2]</span> <span>Manifesto</span>
+                      </a>
+                      
+                    </div>
+                    <div class="main-footer__column">
+                      <a href="#" data-goto=".how" class="main-footer__menu-item">
+                        <span>[4]</span> <span>How to buy</span>
+                      </a>
+                      <a href="mailto:tardi@tardisol.lol" target="_blank" class="main-footer__email">syndrome@syndromeclub.fun</a>
+                      <div class="main-footer__social">
+                        <a href="https://x.com/syndromeclubfun" target="_blank" class="main-footer__social-item">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                            <g clip-path="url(#clip0_40_86)">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M28.9146 28.5L18.918 13.9295L18.9351 13.9432L27.9484 3.5H24.9364L17.5939 12L11.763 3.5L3.86352 3.5L13.1963 17.1034L13.1951 17.1023L3.35205 28.5H6.36408L14.5273 19.0432L21.0151 28.5H28.9146ZM10.5696 5.77272L24.5954 26.2273H22.2085L8.17133 5.77272H10.5696Z" fill="#FFF200"></path>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_40_86">
+                                <rect width="32" height="32" fill="white" transform="translate(0.134277)"></rect>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </a>
+                       
+                        <a href="https://dexscreener.com" target="_blank" class="main-footer__social-item">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1678 12.2743C19.9676 11.8773 20.9851 11.2927 22.004 10.4917C22.2188 10.936 22.2425 11.3236 22.1316 11.6365C22.0531 11.857 21.9053 12.0489 21.7111 12.2015C21.5007 12.3664 21.2378 12.4867 20.9473 12.5516C20.3961 12.6752 19.7524 12.6032 19.1678 12.2743ZM19.3065 16.3431L20.3651 16.952C18.2035 18.1585 17.6158 20.3988 16.9176 22.5807C16.2197 20.3988 15.6318 18.1583 13.4703 16.952L14.529 16.3431C14.739 16.264 14.8742 16.0593 14.8635 15.8359C14.7664 13.7923 15.3206 12.8885 16.0681 12.3213C16.3361 12.1181 16.6288 12.0162 16.9176 12.0162C17.2064 12.0162 17.4991 12.1181 17.767 12.3213C18.5144 12.8888 19.0685 13.7923 18.9716 15.8359C18.961 16.0593 19.0966 16.264 19.3065 16.3431ZM16.9178 3C18.1416 3.03279 19.3684 3.26927 20.4332 3.72947C21.1705 4.04864 21.8583 4.47003 22.4814 4.9741C22.7627 5.20167 22.9944 5.42152 23.2496 5.67464C23.9378 5.69826 24.9436 4.93697 25.4106 4.22462C24.6069 6.84815 20.9398 9.94611 18.4011 11.1317C18.4001 11.1312 18.3994 11.1307 18.3987 11.1302C17.9431 10.7838 17.4306 10.6105 16.918 10.6105C16.4056 10.6105 15.8931 10.7838 15.4375 11.1302C15.4368 11.1307 15.4361 11.1314 15.4351 11.1317C12.8959 9.94611 9.22902 6.84791 8.42529 4.22462C8.89227 4.93697 9.89789 5.6985 10.5861 5.67464C10.8413 5.42176 11.073 5.20167 11.3543 4.9741C11.9771 4.47003 12.6652 4.04864 13.4025 3.72947C14.4675 3.26927 15.6941 3.03279 16.9178 3ZM14.6679 12.2743C13.8683 11.8773 12.8506 11.2927 11.8317 10.4917C11.6169 10.936 11.5932 11.3236 11.7038 11.6365C11.7823 11.857 11.9302 12.0489 12.1243 12.2015C12.3349 12.3664 12.5978 12.4867 12.8884 12.5516C13.4396 12.6752 14.0835 12.6032 14.6679 12.2743Z" fill="#FFF200"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.1201 9.50951C23.681 8.94588 24.1753 8.322 24.5726 7.76514L24.7745 8.14337C25.4243 9.4379 25.762 10.7274 25.762 12.1784L25.7605 14.4811L25.7726 15.6746C25.8196 18.605 26.4565 21.5696 27.8988 24.2828L24.881 21.8596L22.7459 25.31L20.5027 23.2072L16.9179 29L13.3331 23.2074L11.09 25.3102L8.95482 21.8599L5.93701 24.2831C7.37935 21.5698 8.01603 18.605 8.06323 15.6748L8.07533 14.4812L8.07389 12.1786C8.07389 10.7274 8.41135 9.43814 9.06134 8.14361L9.263 7.76538C9.6605 8.322 10.1546 8.94588 10.7155 9.50977L10.5402 9.87209C10.1999 10.5757 10.0873 11.3626 10.3524 12.1111C10.5233 12.593 10.8351 13.0064 11.2372 13.322C11.6277 13.6284 12.0898 13.835 12.5735 13.9434C12.8887 14.0141 13.2097 14.0433 13.5288 14.0334C13.4544 14.4536 13.4217 14.8891 13.4198 15.3332L10.5732 16.9705L12.7698 18.1966C12.9453 18.2947 13.1126 18.4068 13.2695 18.5324C15.0805 20.1516 16.1694 24.9419 16.9177 27.2817C17.666 24.9419 18.7549 20.1516 20.5659 18.5324C20.7227 18.407 20.8901 18.2947 21.0656 18.1966L23.2622 16.9705L20.4155 15.3332C20.4134 14.8891 20.3809 14.4536 20.3066 14.0334C20.6257 14.0433 20.9467 14.0141 21.2619 13.9434C21.7455 13.835 22.2077 13.6284 22.5982 13.322C23.0003 13.0064 23.3121 12.593 23.483 12.1111C23.7481 11.3628 23.6355 10.576 23.2951 9.87209L23.1201 9.50951Z" fill="#FFF200"></path>
+                          </svg>
+                        </a>
+                        <!-- <a href="#" target="_blank" class="main-footer__social-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="33"
+                      height="32"
+                      viewBox="0 0 33 32"
+                      fill="none">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M13.2447 3.65675C11.5985 4.5202 10.2517 5.25095 10.252 5.2807C10.2528 5.35736 14.2029 7.37188 14.343 7.36694C14.4067 7.36485 14.8694 7.15031 15.3711 6.8905L16.2833 6.41804L17.2796 6.93373L18.2758 7.44951L19.9073 6.71132C22.3656 5.59894 22.6209 5.47703 22.5809 5.43614C22.5279 5.38176 21.6462 4.90485 19.2539 3.63658C18.0978 3.02362 16.9757 2.42269 16.7602 2.30101C16.5446 2.17922 16.3391 2.08139 16.3031 2.08328C16.2671 2.08517 14.8909 2.7933 13.2447 3.65675ZM6.02454 7.42155L4.31094 8.31296V12.2249C4.31094 14.3765 4.3334 16.1367 4.36106 16.1367C4.38873 16.1367 5.2317 15.7687 6.23457 15.3189L8.05802 14.501V10.3777L8.94915 10.8665C9.63576 11.2428 10.3229 11.6183 11.0103 11.9932L12.1804 12.6311L12.701 12.394C13.0275 12.2451 13.3535 12.0947 13.6787 11.9429C13.9299 11.825 14.5469 11.5452 15.0496 11.321C15.5523 11.0967 16.0176 10.871 16.0835 10.8197C16.1712 10.7514 15.1025 10.1566 12.1306 8.61988C9.8905 7.46148 7.98581 6.51732 7.89795 6.5219C7.81009 6.52647 6.9671 6.93124 6.02454 7.42155ZM22.8896 7.67184C21.7225 8.20235 20.7667 8.65765 20.7657 8.6836C20.7647 8.70955 21.4007 9.09042 22.1793 9.52986C22.9578 9.96944 23.5948 10.3525 23.5948 10.3814C23.5948 10.4103 22.9059 10.7463 22.064 11.1285C21.2219 11.5107 19.0937 12.4785 17.3344 13.2794L11.4394 15.9625C9.95659 16.6375 8.61996 17.2459 8.46915 17.3147C5.44028 18.6954 4.60783 19.0785 4.49352 19.1442C4.37855 19.2104 4.35254 19.595 4.33207 21.5256L4.30762 23.8283L5.84008 24.6145L7.37245 25.4008L9.49732 24.4351C10.6661 23.9041 11.6223 23.4418 11.6223 23.4076C11.6223 23.3735 11.4063 23.2321 11.1425 23.0926C10.8785 22.9532 10.3336 22.6449 9.93141 22.4069C9.52932 22.169 9.12842 21.9509 9.04035 21.9219C8.95235 21.893 8.88167 21.8426 8.88306 21.8096C8.88452 21.7767 9.82024 21.3292 10.9623 20.8149C13.1805 19.8163 14.8781 19.0465 18.5225 17.387C20.1521 16.645 21.7821 15.9038 23.412 15.1626C24.8445 14.5114 26.5102 13.751 27.1134 13.4727L28.2101 12.9667L28.2344 10.6378L28.2589 8.30906L26.7046 7.50579C25.8497 7.06398 25.1191 6.70363 25.0808 6.70497C25.0425 6.70619 24.0566 7.14127 22.8896 7.67184ZM27.7938 16.0734C27.5647 16.186 27.1124 16.397 26.7885 16.542C26.4646 16.6871 25.8501 16.9664 25.4227 17.1627L24.6459 17.5195L24.6282 19.5639C24.6184 20.6884 24.5773 21.6034 24.5368 21.5975C24.4449 21.5837 22.9889 20.8318 21.5254 20.0421C20.469 19.4721 20.4026 19.4495 20.1544 19.5733C20.0109 19.645 19.1532 20.0323 18.2484 20.4342C17.3436 20.8362 16.5738 21.1913 16.5375 21.2234C16.5015 21.2554 18.3224 22.2492 20.5843 23.4321L24.6967 25.5825L26.4534 24.6673C27.4196 24.1642 28.2411 23.7051 28.279 23.6474C28.3641 23.5175 28.3568 15.8506 28.2715 15.861C28.2378 15.8651 28.0228 15.9607 27.7938 16.0734ZM18.0656 25.0724C17.7608 25.2043 17.4562 25.3365 17.1517 25.4687C16.232 25.8694 16.4122 25.8827 15.318 25.3342C14.5892 24.969 14.2751 24.8562 14.1388 24.9109C14.0365 24.9519 13.1562 25.3507 12.1826 25.7971C11.209 26.2435 10.3786 26.6087 10.3373 26.6087C9.92876 26.6087 10.608 27.0172 13.2285 28.3484L16.3018 29.9093L17.595 29.2666C18.3062 28.913 19.7407 28.2049 20.7828 27.6932C21.8248 27.1813 22.6646 26.7491 22.6489 26.7329C22.6331 26.7166 21.7599 26.2651 20.7085 25.7296L18.7967 24.7559L18.0656 25.0724Z"
+                        fill="#FFF200" />
+                    </svg>
+                  </a> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main-footer__bottom">
+                    <div class="main-footer__bottom-left">
+                      <img src="images/l2.svg" alt="Decor">
+                    </div>
+                    <div class="main-footer__bottom-right">
+                      <img src="images/l3.svg" alt="Decor">
+                      <img src="images/l4.svg" alt="Decor">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__container">
+            <div class="footer__bottom-body">
+              <span>2026 © ALL RIGHTS RESERVED</span>
+             
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div id="manifesto-read-more" aria-hidden="true" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__content">
+          <button data-close="" type="button" class="popup__close">
+            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#75ff86" stroke-linecap="square"></path>
+              <path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#75ff86" stroke-linecap="square"></path>
+            </svg>
+          </button>
+          <div class="popup__body">
+            <div class="popup__body-text">
+              <h3>Core Principles</h3>
+              <ul>
+                <li>
+                  <span>Eternal Conviction:</span> Everyone has survived every cycle in their own story — at least, that’s what they believe.
+                </li>
+                <li>
+                  <span>Maximum Confidence:</span> While others hesitate, they act with certainty… not realizing everyone else is doing the same.
+                </li>
+                <li>
+                  <span> Main Character Energy:</span> The market is their stage.
+Each one convinced they were built to win in the same volatility.
+                </li>
+              </ul>
+              <h3>Why SOLANA?</h3>
+              <p>
+                We’ve watched countless chains rise and fall.
+But this one? It doesn’t just move fast… it moves everyone.
+              </p>
+              <ul>
+                <li>
+                  <span>Blinding Speed:</span> Fast enough for thousands to enter at the same time —
+each believing they were early.
+                </li>
+                <li>
+                  <span>Collective Energy:</span> A perfect mix of conviction, hype, and noise —
+where every voice sounds independent, but echoes the same idea.
+                </li>
+                <li>
+                  <span>Endless Throughput:</span> Built to handle infinite transactions…
+and an infinite number of identical decisions.
+                </li>
+              </ul>
+              <h3>Join the Pattern</h3>
+              <p>
+                Welcome to $SYNDROME —
+where “diamond hands” isn’t a strategy… it’s a shared belief. This isn’t about being first. It’s about realizing everyone thinks they are.
+              </p>
+              <p>
+                When it comes to the past:
+Trust me, bro — everyone says they were early.
+                <br>
+                When it comes to the future:
+Join the crowd chasing the same moment…
+and calling it their own.
+              </p>
+            </div>
+            <div class="popup__body-buttons">
+              <a href="https://x.com/syndromeclubfun" target="_blank" class="popup__body-button">Follow us on X</a>
+              <a href="https://t.me/syndromeclubfun" target="_blank" class="popup__body-button">Join Our Telegram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.min.js"></script>
+    <script src="js/audio_control.js"></script>
+   
+
+</body></html>
